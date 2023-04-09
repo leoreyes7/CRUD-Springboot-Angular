@@ -30,4 +30,10 @@ public class PersonaController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
+
+    @DeleteMapping(value = "delete/{id}")
+    private ResponseEntity<Boolean> deletePersona (@PathVariable("id") Long id){
+        personaService.deleteById(id);
+        return ResponseEntity.ok((personaService.findById(id)!=null));
+    }
 }

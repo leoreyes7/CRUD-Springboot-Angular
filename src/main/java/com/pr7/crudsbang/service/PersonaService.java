@@ -110,8 +110,8 @@ public class PersonaService implements PersonaRepository {
     }
 
     @Override
-    public Optional<Persona> findById(Long aLong) {
-        return Optional.empty();
+    public Optional<Persona> findById(Long id) {
+        return personaRepository.findById(id);
     }
 
     @Override

@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class Pais {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String nombre;
 
     // CONTRUCTOR
@@ -21,11 +21,11 @@ public class Pais {
     }
 
     // GETTER AND SETTER
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

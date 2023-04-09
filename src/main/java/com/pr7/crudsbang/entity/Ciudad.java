@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class Ciudad {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String nombre;
 
     @ManyToOne
@@ -18,7 +18,7 @@ public class Ciudad {
     // CONSTRUCTOR
     public Ciudad(){}
 
-    public Ciudad(int id, String nombre, Pais pais) {
+    public Ciudad(Long id, String nombre, Pais pais) {
         super();
         this.id = id;
         this.nombre = nombre;
@@ -27,11 +27,11 @@ public class Ciudad {
 
     // GETTER AND SETTER
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
