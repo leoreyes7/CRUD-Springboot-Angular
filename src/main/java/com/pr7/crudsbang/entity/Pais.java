@@ -9,10 +9,14 @@ public class Pais {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private int nombre;
+    private String nombre;
 
     // CONTRUCTOR
-    public Pais(int nombre) {
+    public Pais() {
+    }
+
+    public Pais(String nombre) {
+        super();
         this.nombre = nombre;
     }
 
@@ -25,11 +29,11 @@ public class Pais {
         this.id = id;
     }
 
-    public int getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(int nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 }

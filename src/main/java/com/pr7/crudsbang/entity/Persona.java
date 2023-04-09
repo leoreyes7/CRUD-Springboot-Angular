@@ -21,7 +21,9 @@ public class Persona {
     private Ciudad ciudad;
 
     // CONTRUCTOR
+    public Persona(){}
     public Persona(String nombre, String apellido, int edad, Pais pais, Ciudad ciudad) {
+        super();
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;

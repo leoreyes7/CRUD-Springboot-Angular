@@ -10,15 +10,27 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
 @Service
 public class CiudadService implements CiudadRepository {
+
     @Autowired
     private CiudadRepository ciudadRepository;
 
+    public List<Ciudad> findByPaisId(Long id){
+        List<Ciudad> ciudadesRespuesta = new ArrayList<>();
+        List<Ciudad> ciudades = ciudadRepository.findAll();
+        for (int i=0; i < ciudades.size();i++){
+            if (ciudades.get(i).getPais().getId() == id ){
+                ciudadesRespuesta.add(ciudades.get(i));
+            }
+        }
+        return ciudadesRespuesta;
+    }
 
     @Override
     public void flush() {

@@ -16,13 +16,25 @@ public class Ciudad {
     private Pais pais;
 
     // CONSTRUCTOR
+    public Ciudad(){}
 
-    public Ciudad(String nombre, Pais pais) {
+    public Ciudad(int id, String nombre, Pais pais) {
+        super();
+        this.id = id;
         this.nombre = nombre;
         this.pais = pais;
     }
 
     // GETTER AND SETTER
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -38,5 +50,4 @@ public class Ciudad {
     public void setPais(Pais pais) {
         this.pais = pais;
     }
-
 }
